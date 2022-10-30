@@ -22,7 +22,7 @@ elif sim=="2":
 std=0 #standardize? 0: no, 1: yes
 
 mipemphasis=1 #set 0 for default
-timelimit=600
+timelimit=100
 threads=0
 
 writefile="single_dataset_results.txt"
