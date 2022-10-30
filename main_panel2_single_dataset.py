@@ -25,7 +25,7 @@ mipemphasis=1 #set 0 for default
 timelimit=600
 threads=0
 
-writefile="single_dataset_output.txt"
+writefile="single_dataset_results.txt"
 
 def CladCompute():
     #Main Program: Computes CLAD by defining a MILP and calling milp.py
