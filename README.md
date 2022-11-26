@@ -8,11 +8,9 @@ This is an extension of the following repository by Kostas Florios for cross-sec
 https://github.com/kflorios/clad-estimator-MIP-inPython
 
 
-To do:
-- how to install cplex
+# Prerequisites
+- Install cplex
 
-# Installation of CPLEX
-
-
+# Acknowledgement
 This repository is part of a research project was supported by the Hellenic Foundation for Research and Innovation (H.F.R.I.) under the “2nd Call for H.F.R.I. Research Projects to support Post-Doctoral Researchers” (Project Number: 902).
 
