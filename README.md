@@ -1,4 +1,4 @@
-# clad-panel-data-estimator-MIP-inPython
+# CLAD panel data MIP estimator in Python
 
 In this repository we implement the MIP (Mixed Integer Programming) estimator for the CLAD (Censored Least Absolute Deviations) problem for panel data.
 The code is written in Python using the cplex package.
