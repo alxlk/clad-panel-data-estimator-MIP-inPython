@@ -12,8 +12,6 @@ ci=-0.95 #threshold for censoring
 N=100
 T=15
 
-sim="1"
-
 std=0 #standardize? 0: no, 1: yes
 
 mipemphasis=1 #set 0 for default
