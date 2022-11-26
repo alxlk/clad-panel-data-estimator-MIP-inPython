@@ -14,18 +14,13 @@ T=15
 
 sim="1"
 
-if sim=="1":
-    T=15
-elif sim=="2":
-    T=50
-
 std=0 #standardize? 0: no, 1: yes
 
 mipemphasis=1 #set 0 for default
 timelimit=100
 threads=0
 
-writefile="single_dataset_results.txt"
+writefile="results.txt"
 
 def CladCompute():
     #Main Program: Computes CLAD by defining a MILP and calling milp.py
@@ -299,7 +294,7 @@ if __name__ == "__main__":
     with open(writefile, "a+") as file_object:
         #file_object.write("best_integer; best_bound; betas; time; quality\n")
         #data = np.loadtxt("..\R\simulation1data\dataSim1_"+str(i)+".txt",skiprows=1,encoding='utf-8')
-        data = np.loadtxt("single_dataset.txt",skiprows=1,encoding='utf-8')
+        data = np.loadtxt("dataset.txt",skiprows=1,encoding='utf-8')
         #CladCompute()
         value, estimates, time, quality, best_bound = CladCompute()
         print(value)
