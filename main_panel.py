@@ -294,7 +294,7 @@ if __name__ == "__main__":
     with open(writefile, "a+") as file_object:
         #file_object.write("best_integer; best_bound; betas; time; quality\n")
         #data = np.loadtxt("..\R\simulation1data\dataSim1_"+str(i)+".txt",skiprows=1,encoding='utf-8')
-        data = np.loadtxt("dataset.txt",skiprows=1,encoding='utf-8')
+        data = np.loadtxt("input_data.txt",skiprows=1,encoding='utf-8')
         #CladCompute()
         value, estimates, time, quality, best_bound = CladCompute()
         print(value)
