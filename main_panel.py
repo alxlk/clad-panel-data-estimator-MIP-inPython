@@ -5,18 +5,26 @@ import pandas as pd
 import math
 from docplex.mp.progress import *
 
+
 d=15
 dalpha=10
 #censoring="left" #"left" or "right"
-ci=-0.95 #threshold for censoring
-N=100
-T=15
+#ci=-0.95 #threshold for censoring
+#N=100
+#T=15
 
 std=0 #standardize? 0: no, 1: yes
 
 mipemphasis=1 #set 0 for default
 timelimit=100
 threads=0
+
+data_y = np.loadtxt("y.txt",skiprows=1,encoding='utf-8')
+N=int(max(data_y[:,1]))
+T=int(max(data_y[:,2]))
+ci=data_y[1,4]
+
+data_x = np.loadtxt("X.txt",skiprows=1,encoding='utf-8')
 
 writefile="results.txt"
 
@@ -52,8 +60,9 @@ def readXyw():
     
     #Dataset: dataSim1_1.txt
     #data = np.loadtxt("..\example datasets\dataSim1_1.txt",skiprows=1)
-    X=data[:,2:]
-    y=data[:,1]
+    X=data_x[:,3:]
+    #y=data[:,1]
+    y=data_y[:,3]
 
     temp=np.transpose(np.kron(np.diag(np.ones(N)), np.ones(T)))
     X=np.concatenate((temp,X), axis=1)
@@ -291,8 +300,7 @@ if __name__ == "__main__":
 
     with open(writefile, "a+") as file_object:
         #file_object.write("best_integer; best_bound; betas; time; quality\n")
-        #data = np.loadtxt("..\R\simulation1data\dataSim1_"+str(i)+".txt",skiprows=1,encoding='utf-8')
-        data = np.loadtxt("input_data.txt",skiprows=1,encoding='utf-8')
+        #data = np.loadtxt("..\R\simulation1data\dataSim1_"+str(i)+".txt",skiprows=1,encoding='utf-8')     
         #CladCompute()
         value, estimates, time, quality, best_bound = CladCompute()
         print(value)
