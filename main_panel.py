@@ -13,10 +13,10 @@ dalpha=10
 #N=100
 #T=15
 
-std=0 #standardize? 0: no, 1: yes
+std=1 #standardize? 0: no, 1: yes
 
-mipemphasis=1 #set 0 for default
-timelimit=100
+mipemphasis=3 #set 0 for default
+timelimit=500
 threads=0
 
 data_y = np.loadtxt("y.txt",skiprows=1,encoding='utf-8')
